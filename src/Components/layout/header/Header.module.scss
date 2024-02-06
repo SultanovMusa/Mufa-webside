@@ -1,0 +1,30 @@
+.content {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	backdrop-filter: blur(1px);
+	box-shadow: 5px 5px 35px 5px rgb(33, 2, 135);
+	width: 227vh;
+	height: 50px;
+
+	.nav {
+		ul {
+			gap: 150px;
+			list-style: none;
+			display: flex;
+			justify-content: space-around;
+
+			.lis {
+				font-size: 22px;
+
+				color: white;
+				cursor: pointer;
+			}
+			.lis:hover {
+				box-shadow: 0 5 0 0px rgb(33, 2, 135);
+				transition: 1s;
+				color: #646cff;
+			}
+		}
+	}
+}
