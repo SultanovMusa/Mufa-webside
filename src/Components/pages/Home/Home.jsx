@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import scss from "./Home.module.scss";
 import { useNavigate } from "react-router-dom";
 
-const urls =
-	"https://api.elchocrud.pro/api/v1/f0276e0bea68e311f4aed0859866df8f/todos";
+const urls = import.meta.env.VITE_BACKEND_URL;
 
 const Home = () => {
 	const [data, setData] = useState({});
@@ -31,11 +30,7 @@ const Home = () => {
 		getRequest();
 	}, []);
 
-	// const deleteData = async (id) => {
-	// 	const res = await axios.delete(`${urls}/${id}`);
 
-	// 	setData({});
-	// };
 
 	const navigate = useNavigate();
 
@@ -46,15 +41,14 @@ const Home = () => {
 	};
 
 	return (
-		<div>
-			<span>Welcome 🌠 </span>
-
-			<button onClick={handleLogout}>Выйти🔙</button>
-
-			<div className={scss.content}>
-				<h3 className={scss.h3}>Email: {data.name}</h3>
-				<p>Password: {data.pas}</p>
-				{/* <button onClick={() => deleteData(data._id)}>Delete</button> */}
+		<div className={scss.form}>
+			<div className="container">
+				<span>Welcome 🌠 </span>
+				<button onClick={handleLogout}>Выйти🔙</button>
+				<div className={scss.content}>
+					<h3 className={scss.h3}>Email: {data.name}</h3>
+					<p>Password: {data.pas}</p>
+				</div>
 			</div>
 		</div>
 	);

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import scss from "./Header.module.scss";
+
 const Header = () => {
 	return (
 		<div className={scss.content}>
@@ -7,7 +8,7 @@ const Header = () => {
 				<ul>
 					<Link className={scss.lis} to={"/login"}>Login</Link>
 					<Link className={scss.lis} to={"/home"}>Home</Link>
-					<Link  className={scss.lis}to={"/registr"}>Registration</Link>
+					<Link  className={scss.lis}to={"/registration"}>Registration</Link>
 				</ul>
 			</nav>
 		</div>
